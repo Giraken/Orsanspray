@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -29,6 +30,7 @@
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
+  --title-font: 'Fredoka', sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -90,6 +92,7 @@ body{
 
 h1,h2,h3,h4{
   color: var(--title-color);
+  font-family: var(--title-font);
   font-weight: var(--font-semi-bold);
 }
 
@@ -170,7 +173,7 @@ button{
 }
 
 .nav__logo-img{
-  width: 1.25rem;
+  width: 7.5rem;
 }
 
 .nav__link,
@@ -433,45 +436,45 @@ button{
   animation: floating 2s ease-in-out infinite;
 }
 
-/*=============== TRICK OR TREAT ===============*/
-.trick__container{
+/*=============== OUR TEAM ===============*/
+.team__container{
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding-top: 1rem;
 }
 
-.trick__content{
+.team__content{
   position: relative;
   background: var(--container-color);
   border-radius: 1rem;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
   text-align: center;
   overflow: hidden;
 }
 
-.trick__img{
-  width: 90px;
+.team__img{
+  width: 250px;
   transition: .3s;
 }
 
-.trick__subtitle,
-.trick__price{
+.team__subtitle,
+.team__price{
   display: block;
 }
 
-.trick__subtitle{
+.team__subtitle{
   font-size: var(--smaller-font-size);
   margin-bottom: var(--mb-0-5);
 }
 
-.trick__title,
-.trick__price{
+.team__title,
+.team__price{
   color: var(--title-color);
   font-weight: var(--font-medium);
   font-size: var(--normal-font-size);
 }
 
-.trick__button{
+.team__button{
   display: inline-flex;
   padding: .5rem;
   border-radius: .25rem .25rem .75rem .25rem;
@@ -480,16 +483,16 @@ button{
   bottom: 0;
 }
 
-.trick__icon{
+.team__icon{
   font-size: 1.25rem;
   color: var(--title-color);
 }
 
-.trick__content:hover .trick__img{
+.team__content:hover .team__img{
   transform: translateY(-.5rem);
 }
 
-.trick__content:hover .trick__button{
+.team__content:hover .team__button{
   right: 0;
 }
 
@@ -775,7 +778,7 @@ button{
   }
 
   .category__container,
-  .trick__container{
+  .team__container{
     grid-template-columns: .8fr;
     justify-content: center;
   }
@@ -853,9 +856,17 @@ button{
     width: 250px;
   }
 
-  .trick__container{
-    grid-template-columns: repeat(3, 200px);
+  .leader-container{
+    grid-template-columns: repeat(1, 300px);
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .team__container{
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
   }
 
@@ -953,16 +964,16 @@ button{
     padding-right: 2rem;
   }
 
-  .trick__container{
+  .team__container{
     gap: 3.5rem;
   }
-  .trick__content{
+  .team__content{
     border-radius: 1.5rem;
   }
-  .trick__img{
-    width: 110px;
+  .team__img{
+    width: 250px;
   }
-  .trick__title{
+  .team__title{
     font-size: var(--h3-font-size);
   }
 
